@@ -1,42 +1,41 @@
-/*
- ++++++ Generic Node to create Doubly Linked-Lists. ++++++
- */
+#include "./SharedPtr/SharedPtr.h"
 
 #ifndef NODE_H
 
 #define NODE_H
+
+/* * * * * * * * * * * * * * * * * * * * * * * *
+ *		   									   *
+ * 	 Generic Node to create a Singly Linked-   *
+ *   List. No destructor needed. Resources     *
+ *   delete on their own.					   *
+ *											   *					   
+ * * * * * * * * * * * * * * * * * * * * * * * */
 
 template<typename T>
 
 struct Node {
 
 	/*
-	 +++++++ Ptr to actual value. Not just any ptr though (See SharedPtr.h). ++++++++++++
-	 +++++++ In the case of  
+	 +++++ Pointer to T object +++++
 	 */
 
 	SharedPtr<T> value;
 
-	Node<T> *next, *prev;
+    /*
+     +++++ Pointer to next and prev node in linked list ++++++
+     */
+
+	SharedPtr < Node<T> > next;
 
 	/*
-	 +++++++ Main C'tor. Takes in ptr to init data member named "value" . ++++++++
+	 +++++ Main C'tor. Takes in ptr to initialize SharedPtr to T Object . +++++
 	 */
 
 	Node<T>(T *ObjPtr = nullptr)
 
-		:value(ObjPtr), next(nullptr), prev(nullptr)
-	{}
-
-	/*
-	 +++++++ C'tor that takes in SharedPtr to copy. Always calls SharedPtr Copy C'tor ++++++++
-	 */
-
-	Node<T>(const SharedPtr<T>& ptrObj) // TODO: MAKE this Universal.
-
-		:value(ptrObj), next(nullptr), prev(nullptr)
-	{}
-
+		:value(ObjPtr), next(nullptr)
+    {}
 
 }; // Node
 
