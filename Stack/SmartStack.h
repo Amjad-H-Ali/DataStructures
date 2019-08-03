@@ -52,14 +52,14 @@ public:
 
   
     /*
-    +++++ Overloaded subscript operator to access data in linked-list based on index +++++
-    */
+     +++++ Overloaded subscript operator to access data in linked-list based on index +++++
+     */
 
     T &operator [](size_t indx) const;
 
     /*
-    +++++ Returns top of stack without popping it off. Return type is SharedPtr to object of type T +++++++
-    */
+     +++++ Returns top of stack without popping it off. Return type is SharedPtr to object of type T +++++++
+     */
 
     T &top() const;
 

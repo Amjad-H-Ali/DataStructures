@@ -77,21 +77,20 @@ void SmartStack::pop() {
 };
 
 
-
 /*
-+++++ Overloaded subscript operator to access data in linked-list based on index +++++
-*/
+ +++++ Overloaded subscript operator to access data in linked-list based on index +++++
+ */
 
-T &SmartStack::operator [](size_t indx) const {
+inline T &SmartStack::operator [](size_t indx) const {
 
     return *(indexMap.map(indx)->value);
 }
 
 /*
-+++++ Returns top of stack without popping it off. Return type is SharedPtr to object of type T +++++++
-*/
+ +++++ Returns top of stack without popping it off. Return type is SharedPtr to object of type T +++++++
+ */
 
-T &SmartStack::top() const {
+inline T &SmartStack::top() const {
 
     // TODO: Ensure there's a head to begin with lest we seg. fault.
 

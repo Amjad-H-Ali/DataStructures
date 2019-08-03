@@ -45,7 +45,7 @@ struct Trie::Node {
  ++++ Returns unique key ++++
  */
 
-size_t Trie::hash(char letter) const {
+inline size_t Trie::hash(char letter) const {
 
     return letter - '!';
 }
@@ -250,7 +250,7 @@ void Trie::push(size_t indx, const SharedPtr<T> &data) {
  +++++ Finds corresponding data of string in O(1) time complexity. Range of string is allowed ++++++
  */
 
-SharedPtr<T> Trie::map(const std::string &data,  std::string::size_type start = 0, std::string::size_type end = 0) const {
+inline SharedPtr<T> Trie::map(const std::string &data,  std::string::size_type start = 0, std::string::size_type end = 0) const {
 
     return goTo(data, start, end)->tPtr;
 
@@ -263,7 +263,7 @@ SharedPtr<T> Trie::map(const std::string &data,  std::string::size_type start = 
  +++++ Uses indx to map to destination and returns the data found there +++++
  */ 
 
-SharedPtr<T> Trie::map(size_t indx) const {
+inline SharedPtr<T> Trie::map(size_t indx) const {
 
     
     return goTo(indx)->tPtr;
@@ -274,7 +274,7 @@ SharedPtr<T> Trie::map(size_t indx) const {
  +++++ Goes to destination and sets data to nullptr +++++
  */
 
-void Trie::eraseData(size_t indx) {
+inline void Trie::eraseData(size_t indx) {
     goTo(indx)->tPtr = nullptr;
 }
 
@@ -284,7 +284,7 @@ void Trie::eraseData(size_t indx) {
  +++++ Goes to destination and sets data to nullptr +++++
  */
 
-void Trie::eraseData(const std::string &str) {
+inline void Trie::eraseData(const std::string &str) {
     goTo(str)->tPtr = nullptr;
 }
 
