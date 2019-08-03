@@ -1,5 +1,14 @@
 #include "SharedPtr.h"
 
+/* * * * * * * * * * * * * * * * * * * * * * * *
+ *                                             *
+ *  Smart pointer that keeps track of shared   *
+ *  resources and only deletes it if share     *
+ *  count is 0.                                *
+ *                                             *
+ * * * * * * * * * * * * * * * * * * * * * * * */
+ 
+
 /* 	
  +++++ Main C'tor +++++
  */
