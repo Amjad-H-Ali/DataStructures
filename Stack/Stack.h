@@ -4,6 +4,7 @@
 
 #include "../SharedPtr/SharedPtr.h"
 #include "../Trie/Trie.h"
+#include "../Node.h"
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * A Stack, implemented using a linked-list, that can  *
