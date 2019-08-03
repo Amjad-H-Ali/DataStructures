@@ -1,5 +1,6 @@
 
 #include "Trie.h"
+
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * *
  *                                                     *
  * Trie structure that supports strings and ints as    *

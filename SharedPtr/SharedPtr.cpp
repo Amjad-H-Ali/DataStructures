@@ -7,7 +7,7 @@
  *  count is 0.                                *
  *                                             *
  * * * * * * * * * * * * * * * * * * * * * * * */
- 
+
 
 /* 	
  +++++ Main C'tor +++++
@@ -256,9 +256,9 @@ inline operator bool() const {
 
 
 /*
-++++++ Deletes resource and sharedBy counter if this  ++++++
-++++++ instance is the only one sharing that resource.++++++
-*/
+ ++++++ Deletes resource and sharedBy counter if this  ++++++
+ ++++++ instance is the only one sharing that resource.++++++
+ */
 
 inline void SharedPtr::cleanUp() { 
 
