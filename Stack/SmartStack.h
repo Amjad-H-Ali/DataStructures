@@ -1,6 +1,6 @@
-#ifndef STACK_H
+#ifndef SMART_STACK_H
 
-#define STACK_H
+#define SMART_STACK_H
 
 #include "../SharedPtr/SharedPtr.h"
 #include "../Trie/Trie.h"

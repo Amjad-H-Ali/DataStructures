@@ -1,4 +1,4 @@
-#include "Stack.h"
+#include "SmartStack.h"
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * A Stack, implemented using a linked-list, that can  *
