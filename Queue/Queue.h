@@ -2,6 +2,9 @@
 
 #define QUEUE_H
 
+#include "../SharedPtr/SharedPtr.h"
+#include "../Node.h"
+
 /* * * * * * * * * * * * * * * * * * * * * * * *
  *											   *
  * 	Queue, implemented using a linked-list,    *
